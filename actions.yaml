@@ -1,0 +1,23 @@
+name: priar3
+descriptions: trying to deploy actions
+
+jobs:
+  job-name:
+    runs-on: ubuntu-latest
+    services:
+      service-name-1:
+        image: docker.io/httpd
+        ports:
+           - 3001:80
+
+      service-name-2:
+        image: docker.io/nginx
+        ports:
+           - 4001:80
+
+    steps:
+      - name: Get from service-1
+        run: curl http://localhost:3001
+
+      - name: Get from service-2
+        run: curl http://localhost:4001
