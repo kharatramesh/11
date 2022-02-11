@@ -1,6 +1,6 @@
 name: priar3
 descriptions: trying to deploy actions
-
+docker: 'docker'
 jobs:
   job-name:
     runs-on: ubuntu-latest
