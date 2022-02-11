@@ -1,23 +1,12 @@
 name: priar3
+author: "priar"
 descriptions: trying to deploy actions
 docker: 'docker'
-jobs:
-  job-name:
-    runs-on: ubuntu-latest
-    services:
-      service-name-1:
-        image: docker.io/httpd
-        ports:
-           - 3001:80
-
-      service-name-2:
-        image: docker.io/nginx
-        ports:
-           - 4001:80
-
-    steps:
-      - name: Get from service-1
-        run: curl http://localhost:3001
-
-      - name: Get from service-2
-        run: curl http://localhost:4001
+inputs:
+  numOctocats:
+    description: 'Number of Octocats'
+    required: false
+    default: '1'
+  octocatEyeColor:
+    description: 'Eye color of the Octocats'
+    required: true
